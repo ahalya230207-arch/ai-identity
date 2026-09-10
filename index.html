@@ -7,26 +7,18 @@
 
 <style>
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
-    font-family:Arial,Helvetica,sans-serif;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
 body{
-    background:#07111f;
-    color:#eaf2ff;
+    background:#06101d;
+    color:#fff;
 }
 
-button,input,select{
-    font:inherit;
-}
-
-.hidden{
-    display:none!important;
-}
-
-/* LOGIN */
+/* ================= LOGIN ================= */
 
 #loginPage{
     min-height:100vh;
@@ -34,233 +26,228 @@ button,input,select{
     align-items:center;
     justify-content:center;
     padding:20px;
-    background:
-      radial-gradient(circle at top,#12355b 0,#07111f 45%,#030914 100%);
+    background:linear-gradient(135deg,#06101d,#0b2742,#06101d);
 }
 
 .login-box{
     width:100%;
-    max-width:460px;
-    background:#0d1b2e;
-    border:1px solid #244563;
-    border-radius:24px;
-    padding:35px;
-    box-shadow:0 20px 60px rgba(0,0,0,.45);
+    max-width:430px;
+    background:#0c1d30;
+    border:1px solid #2b4d6d;
+    border-radius:22px;
+    padding:32px;
+    box-shadow:0 20px 70px rgba(0,0,0,.5);
 }
 
 .logo{
     width:75px;
     height:75px;
-    border-radius:22px;
-    background:linear-gradient(135deg,#19c7ff,#1769ff);
+    margin:auto;
     display:flex;
     align-items:center;
     justify-content:center;
+    background:linear-gradient(135deg,#0da9ed,#5147ed);
+    border-radius:22px;
     font-size:38px;
-    margin:0 auto 18px;
 }
 
 .login-box h1{
     text-align:center;
+    margin-top:15px;
     font-size:27px;
 }
 
-.subtitle{
+.login-box .sub{
     text-align:center;
-    color:#91a7c2;
-    margin:8px 0 28px;
+    color:#8da6bd;
+    margin:8px 0 25px;
+    font-size:13px;
 }
 
 label{
     display:block;
-    margin:15px 0 7px;
-    color:#b9cbe0;
-    font-size:14px;
+    color:#b7c9da;
+    font-size:13px;
+    margin:14px 0 6px;
 }
 
 input,select{
     width:100%;
     padding:14px;
-    border-radius:11px;
-    border:1px solid #2a4765;
-    background:#081524;
-    color:white;
+    border-radius:10px;
+    border:1px solid #31516e;
+    background:#071625;
+    color:#fff;
     outline:none;
 }
 
 input:focus,select:focus{
-    border-color:#19c7ff;
+    border-color:#18c7ff;
 }
 
 .btn{
+    width:100%;
+    padding:14px;
+    margin-top:14px;
     border:0;
-    border-radius:11px;
-    padding:14px 18px;
-    cursor:pointer;
-    color:white;
+    border-radius:10px;
+    color:#fff;
     font-weight:bold;
-    background:linear-gradient(135deg,#128dd8,#4c42f5);
-    transition:.2s;
+    cursor:pointer;
+    background:linear-gradient(135deg,#0e9bdf,#5045ed);
 }
 
 .btn:hover{
-    transform:translateY(-1px);
-    opacity:.92;
+    opacity:.9;
 }
 
-.btn-secondary{
-    background:#162b43;
-    border:1px solid #31516f;
-}
-
-.login-buttons{
-    display:grid;
-    gap:10px;
-    margin-top:20px;
+.secondary{
+    background:#142d46;
+    border:1px solid #31516e;
 }
 
 .demo{
-    margin-top:20px;
-    padding:12px;
+    margin-top:18px;
+    padding:13px;
+    text-align:center;
+    background:#071625;
     border-radius:10px;
-    background:#091829;
-    color:#8fa8c2;
+    color:#8ca4bb;
     font-size:12px;
-    text-align:center;
 }
 
-.security-note{
-    margin-top:15px;
-    text-align:center;
-    color:#6f89a4;
-    font-size:11px;
+.demo b{
+    color:#fff;
 }
 
-/* APP */
+.error{
+    display:none;
+    margin-top:12px;
+    padding:10px;
+    border-radius:8px;
+    background:#421b25;
+    color:#ff8997;
+    text-align:center;
+    font-size:13px;
+}
+
+/* ================= APP ================= */
 
 #app{
-    min-height:100vh;
-    display:flex;
+    display:none;
 }
 
 .sidebar{
-    width:250px;
-    min-height:100vh;
-    background:#091626;
-    border-right:1px solid #1c344c;
-    padding:20px 15px;
     position:fixed;
     left:0;
     top:0;
     bottom:0;
+    width:245px;
+    background:#091827;
+    border-right:1px solid #203b55;
+    padding:20px 14px;
+    z-index:10;
 }
 
 .brand{
     display:flex;
     align-items:center;
     gap:10px;
-    padding:10px;
+    padding:8px;
     margin-bottom:25px;
 }
 
-.brand-icon{
-    width:42px;
-    height:42px;
-    border-radius:12px;
+.brandIcon{
+    width:43px;
+    height:43px;
     display:flex;
-    justify-content:center;
     align-items:center;
-    background:#1469d8;
+    justify-content:center;
+    background:#126bd9;
+    border-radius:12px;
     font-size:22px;
 }
 
-.brand-text strong{
+.brandText b{
     display:block;
-    font-size:15px;
 }
 
-.brand-text span{
-    color:#728ba5;
-    font-size:11px;
-}
-
-.nav{
-    display:grid;
-    gap:7px;
+.brandText small{
+    color:#7089a2;
 }
 
 .nav button{
-    background:transparent;
-    border:0;
-    color:#91a7bf;
-    text-align:left;
+    width:100%;
     padding:13px;
-    border-radius:10px;
+    margin:4px 0;
+    border:0;
+    border-radius:9px;
+    text-align:left;
+    background:transparent;
+    color:#91a8bd;
     cursor:pointer;
 }
 
 .nav button:hover,
 .nav button.active{
-    background:#12304c;
-    color:white;
+    background:#12324e;
+    color:#fff;
 }
 
-.officer-card{
+.officer{
     position:absolute;
     bottom:20px;
-    left:15px;
-    right:15px;
+    left:14px;
+    right:14px;
+    background:#10263d;
     padding:13px;
-    border-radius:12px;
-    background:#0e2238;
-    border:1px solid #1f405d;
+    border-radius:10px;
 }
 
-.officer-card small{
-    color:#718ba5;
+.officer small{
+    color:#718aa3;
 }
 
-.officer-card strong{
+.officer b{
     display:block;
     margin:4px 0;
 }
 
-.status{
-    color:#35e6a2;
+.online{
+    color:#40e5a4;
     font-size:12px;
 }
 
 .main{
-    margin-left:250px;
-    width:calc(100% - 250px);
+    margin-left:245px;
     padding:25px;
 }
 
-.topbar{
+.top{
     display:flex;
     justify-content:space-between;
     align-items:center;
     margin-bottom:25px;
 }
 
-.topbar h2{
+.top h2{
     font-size:25px;
 }
 
-.topbar p{
-    color:#728ba5;
+.top p{
+    color:#7892aa;
     margin-top:5px;
 }
 
-.live{
+.system{
+    background:#0c3028;
+    color:#40e5a4;
     padding:9px 13px;
     border-radius:20px;
-    background:#0c2c25;
-    color:#45e9a8;
     font-size:12px;
 }
 
-/* PAGES */
+/* ================= PAGES ================= */
 
 .page{
     display:none;
@@ -270,7 +257,7 @@ input:focus,select:focus{
     display:block;
 }
 
-/* STATS */
+/* ================= CARDS ================= */
 
 .stats{
     display:grid;
@@ -279,29 +266,38 @@ input:focus,select:focus{
 }
 
 .card{
-    background:#0d1c2e;
-    border:1px solid #203a54;
+    background:#0c1c2d;
+    border:1px solid #213c56;
     border-radius:15px;
     padding:20px;
 }
 
-.stat-title{
-    color:#7892ad;
+.cardTitle{
+    color:#7892aa;
     font-size:13px;
 }
 
-.stat-number{
-    font-size:27px;
-    margin:10px 0;
+.number{
+    font-size:28px;
     font-weight:bold;
+    margin:10px 0;
 }
 
-.stat-change{
-    color:#36dfa1;
-    font-size:12px;
+.green{
+    color:#40e5a4;
 }
 
-/* GRID */
+.yellow{
+    color:#f1d05d;
+}
+
+.red{
+    color:#ff687a;
+}
+
+.blue{
+    color:#52d8ff;
+}
 
 .grid{
     display:grid;
@@ -310,46 +306,75 @@ input:focus,select:focus{
     margin-top:18px;
 }
 
-.section-title{
+.title{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:18px;
+    margin-bottom:17px;
 }
 
-.section-title h3{
+.title h3{
     font-size:17px;
 }
 
 .badge{
     padding:5px 9px;
-    border-radius:20px;
-    font-size:11px;
+    border-radius:15px;
+    font-size:10px;
+    font-weight:bold;
 }
 
-.verified{
-    background:#0b392a;
-    color:#42e7a4;
+.badgeGreen{
+    background:#0b382b;
+    color:#43e5a6;
 }
 
-.review{
-    background:#3b3210;
-    color:#f5d25c;
+.badgeYellow{
+    background:#403610;
+    color:#f1d15d;
 }
 
-.high{
-    background:#421c24;
-    color:#ff7283;
+.badgeRed{
+    background:#421b25;
+    color:#ff7080;
 }
 
-.low{
-    background:#123649;
-    color:#63d9ff;
+.badgeBlue{
+    background:#10374a;
+    color:#58d8ff;
 }
 
-/* TABLE */
+/* ================= CHART ================= */
 
-.table-wrap{
+.chart{
+    height:220px;
+    display:flex;
+    align-items:end;
+    gap:12px;
+    padding:15px 5px 0;
+}
+
+.bar{
+    flex:1;
+    background:linear-gradient(to top,#1471e4,#1ccaff);
+    border-radius:5px 5px 0 0;
+}
+
+.days{
+    display:flex;
+    gap:12px;
+}
+
+.days span{
+    flex:1;
+    text-align:center;
+    color:#7189a0;
+    font-size:10px;
+}
+
+/* ================= TABLE ================= */
+
+.tableBox{
     overflow-x:auto;
 }
 
@@ -359,207 +384,187 @@ table{
 }
 
 th,td{
-    text-align:left;
     padding:13px;
+    text-align:left;
     border-bottom:1px solid #1b344b;
-    white-space:nowrap;
     font-size:13px;
+    white-space:nowrap;
 }
 
 th{
-    color:#7891aa;
+    color:#718aa2;
     font-size:11px;
 }
 
-/* CHART */
+/* ================= SCREENING ================= */
 
-.chart{
-    height:220px;
-    display:flex;
-    align-items:end;
-    gap:13px;
-    padding-top:20px;
-}
-
-.bar{
-    flex:1;
-    background:linear-gradient(to top,#1569e6,#25d4ff);
-    border-radius:6px 6px 0 0;
-    min-width:15px;
-}
-
-.chart-labels{
-    display:flex;
-    gap:13px;
-}
-
-.chart-labels span{
-    flex:1;
-    text-align:center;
-    color:#7189a2;
-    font-size:10px;
-}
-
-/* SCREENING */
-
-.screen-grid{
+.screenGrid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:20px;
+    gap:18px;
 }
 
-.upload-box{
-    border:2px dashed #2d5778;
+.upload{
+    border:2px dashed #315875;
+    background:#081827;
     border-radius:15px;
-    padding:35px;
+    padding:40px 20px;
     text-align:center;
     cursor:pointer;
-    background:#0a1929;
 }
 
-.upload-box:hover{
-    border-color:#1acaff;
+.upload:hover{
+    border-color:#16caff;
 }
 
-.upload-icon{
+.uploadIcon{
     font-size:45px;
-    margin-bottom:10px;
+    margin-bottom:12px;
+}
+
+.upload p{
+    color:#718aa3;
+    margin-top:7px;
+    font-size:12px;
 }
 
 .preview{
-    margin-top:15px;
-    max-width:100%;
-    max-height:280px;
-    border-radius:10px;
     display:none;
+    max-width:100%;
+    max-height:250px;
+    margin:15px auto 0;
+    border-radius:10px;
 }
 
 .progress{
-    height:10px;
-    background:#172b40;
+    width:100%;
+    height:9px;
+    background:#182b40;
+    margin-top:15px;
     border-radius:20px;
     overflow:hidden;
-    margin:15px 0;
 }
 
-.progress-bar{
+.progressBar{
     height:100%;
-    width:0%;
-    background:linear-gradient(90deg,#19c7ff,#624bff);
-    transition:width .2s;
+    width:0;
+    background:linear-gradient(90deg,#16caff,#5547ed);
 }
 
 .result{
+    background:#081827;
+    border:1px solid #23435d;
     padding:20px;
-    border-radius:14px;
-    background:#091827;
-    border:1px solid #23415d;
-    margin-top:15px;
+    border-radius:13px;
 }
 
-.risk-score{
-    font-size:48px;
+.risk{
+    font-size:50px;
     font-weight:bold;
-    margin:8px 0;
+    margin:10px 0;
 }
 
 .indicator{
-    padding:11px;
-    border-radius:9px;
-    margin-top:8px;
-    background:#101f31;
     display:flex;
     justify-content:space-between;
+    background:#102235;
+    padding:12px;
+    margin-top:8px;
+    border-radius:8px;
 }
 
-/* SECURITY */
+/* ================= SECURITY ================= */
 
-.security-grid{
+.securityGrid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:15px;
 }
 
-.security-item{
-    padding:18px;
+.securityCard{
+    background:#0c1c2d;
+    border:1px solid #213c56;
+    padding:20px;
     border-radius:14px;
-    background:#0d1c2e;
-    border:1px solid #203a54;
 }
 
-.security-item h4{
-    margin-bottom:8px;
+.securityCard h3{
+    margin-bottom:10px;
 }
 
-.security-item p{
-    color:#7790a9;
+.securityCard p{
+    color:#7891a8;
     font-size:13px;
+    line-height:1.5;
 }
 
-/* MODAL */
+/* ================= CAMERA ================= */
 
 .modal{
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.75);
+    background:rgba(0,0,0,.8);
     display:none;
     align-items:center;
     justify-content:center;
-    z-index:100;
     padding:20px;
+    z-index:100;
 }
 
-.modal-box{
+.modalBox{
     width:100%;
     max-width:600px;
-    background:#0d1c2e;
-    border:1px solid #2a4965;
+    background:#0c1c2d;
+    border:1px solid #31516e;
     border-radius:18px;
-    padding:25px;
+    padding:22px;
 }
 
 .camera{
     width:100%;
-    background:#02070d;
-    border-radius:13px;
-    margin:15px 0;
     max-height:400px;
-    object-fit:cover;
+    background:#000;
+    border-radius:12px;
+    margin:15px 0;
 }
 
-.toast{
+/* ================= TOAST ================= */
+
+#toast{
+    display:none;
     position:fixed;
     right:20px;
     bottom:20px;
-    background:#10253b;
-    border:1px solid #315574;
+    background:#112a42;
+    border:1px solid #315875;
     padding:14px 18px;
     border-radius:10px;
-    display:none;
     z-index:200;
 }
 
-/* RESPONSIVE */
+/* ================= MOBILE ================= */
 
 @media(max-width:1050px){
+
     .stats{
         grid-template-columns:repeat(3,1fr);
     }
 
-    .security-grid{
+    .securityGrid{
         grid-template-columns:1fr 1fr;
     }
 }
 
 @media(max-width:800px){
+
     .sidebar{
-        width:70px;
-        padding:12px 8px;
+        width:65px;
+        padding:12px 7px;
     }
 
-    .brand-text,
+    .brandText,
     .nav button span,
-    .officer-card{
+    .officer{
         display:none;
     }
 
@@ -569,17 +574,16 @@ th{
 
     .nav button{
         text-align:center;
-        font-size:20px;
+        font-size:19px;
     }
 
     .main{
-        margin-left:70px;
-        width:calc(100% - 70px);
+        margin-left:65px;
         padding:15px;
     }
 
     .grid,
-    .screen-grid{
+    .screenGrid{
         grid-template-columns:1fr;
     }
 
@@ -587,22 +591,23 @@ th{
         grid-template-columns:1fr 1fr;
     }
 
-    .security-grid{
+    .securityGrid{
         grid-template-columns:1fr;
     }
 }
 
 @media(max-width:500px){
+
     .stats{
         grid-template-columns:1fr;
     }
 
-    .topbar{
-        align-items:flex-start;
+    .top h2{
+        font-size:19px;
     }
 
-    .topbar h2{
-        font-size:20px;
+    .system{
+        font-size:9px;
     }
 
     .login-box{
@@ -614,9 +619,11 @@ th{
 
 <body>
 
-<!-- LOGIN -->
+<!-- =====================================================
+     LOGIN PAGE
+===================================================== -->
 
-<section id="loginPage">
+<div id="loginPage">
 
 <div class="login-box">
 
@@ -624,59 +631,83 @@ th{
 
 <h1>AI IdentityShield</h1>
 
-<p class="subtitle">
-AI-Based Fake Identity & Document Screening
+<p class="sub">
+AI-Based Fake Identity & Document Screening System
 </p>
 
 <label>Officer ID</label>
-<input id="officerId" type="text" placeholder="Enter Officer ID">
+
+<input
+id="officerID"
+type="text"
+placeholder="Enter Officer ID"
+autocomplete="off"
+>
 
 <label>Password</label>
-<input id="password" type="password" placeholder="Enter password">
 
-<div class="login-buttons">
+<input
+id="password"
+type="password"
+placeholder="Enter Password"
+>
 
-<button class="btn" onclick="passwordLogin()">
+<button class="btn" onclick="login()">
 🔐 Secure Login
 </button>
 
-<button class="btn btn-secondary" onclick="biometricLogin()">
-👆 Use Fingerprint / Device Biometric
+<button class="btn secondary" onclick="biometricDemo()">
+👆 Fingerprint / Device Biometric
 </button>
 
-<button class="btn btn-secondary" onclick="openEyeCheck()">
+<button class="btn secondary" onclick="openCamera()">
 👁️ Eye / Face Liveness Check
 </button>
 
+<div id="loginError" class="error">
+❌ Invalid Officer ID or Password
 </div>
 
 <div class="demo">
-Demo Officer ID: <b>OFFICER001</b><br>
-Password: <b>AIShield@2026</b>
+
+Demo Login<br>
+
+Officer ID:
+<b>OFFICER001</b>
+
+<br>
+
+Password:
+<b>123456</b>
+
 </div>
 
-<div class="security-note">
-🔒 Prototype security system • SIH Demonstration
 </div>
 
 </div>
-</section>
 
 
-<!-- APPLICATION -->
+<!-- =====================================================
+     MAIN APPLICATION
+===================================================== -->
 
-<div id="app" class="hidden">
+<div id="app">
 
 <aside class="sidebar">
 
 <div class="brand">
-<div class="brand-icon">🛡️</div>
 
-<div class="brand-text">
-<strong>IdentityShield</strong>
-<span>Security Platform</span>
+<div class="brandIcon">
+🛡️
 </div>
+
+<div class="brandText">
+<b>IdentityShield</b>
+<small>Security Platform</small>
 </div>
+
+</div>
+
 
 <div class="nav">
 
@@ -685,7 +716,7 @@ Password: <b>AIShield@2026</b>
 </button>
 
 <button onclick="showPage('screening',this)">
-📄 <span>Screening</span>
+📄 <span>Document Screening</span>
 </button>
 
 <button onclick="showPage('cases',this)">
@@ -697,7 +728,7 @@ Password: <b>AIShield@2026</b>
 </button>
 
 <button onclick="showPage('security',this)">
-🔐 <span>Security</span>
+🔐 <span>Security Center</span>
 </button>
 
 <button onclick="logout()">
@@ -706,10 +737,19 @@ Password: <b>AIShield@2026</b>
 
 </div>
 
-<div class="officer-card">
-<small>Logged in as</small>
-<strong id="loggedOfficer">OFFICER001</strong>
-<div class="status">● Online</div>
+
+<div class="officer">
+
+<small>Logged Officer</small>
+
+<b id="currentOfficer">
+OFFICER001
+</b>
+
+<div class="online">
+● Online
+</div>
+
 </div>
 
 </aside>
@@ -717,56 +757,63 @@ Password: <b>AIShield@2026</b>
 
 <main class="main">
 
-<div class="topbar">
+<div class="top">
 
 <div>
-<h2 id="pageTitle">Main Dashboard</h2>
+
+<h2 id="pageTitle">
+Main Dashboard
+</h2>
+
 <p id="pageDescription">
-AI-powered identity and document screening center
+AI-powered identity verification center
 </p>
+
 </div>
 
-<div class="live">
+<div class="system">
 ● SYSTEM ONLINE
 </div>
 
 </div>
 
 
-<!-- DASHBOARD -->
+<!-- =====================================================
+     DASHBOARD
+===================================================== -->
 
 <section id="dashboard" class="page active">
 
 <div class="stats">
 
 <div class="card">
-<div class="stat-title">Total Documents</div>
-<div class="stat-number">1,248</div>
-<div class="stat-change">↑ 12.4% this month</div>
+<div class="cardTitle">Total Documents</div>
+<div class="number">1,248</div>
+<div class="green">↑ 12.4%</div>
 </div>
 
 <div class="card">
-<div class="stat-title">Verified</div>
-<div class="stat-number">982</div>
-<div class="stat-change">78.7% verified</div>
+<div class="cardTitle">Verified</div>
+<div class="number">982</div>
+<div class="green">78.7%</div>
 </div>
 
 <div class="card">
-<div class="stat-title">Low Risk</div>
-<div class="stat-number">156</div>
-<div class="stat-change">12.5% of total</div>
+<div class="cardTitle">Low Risk</div>
+<div class="number">156</div>
+<div class="blue">12.5%</div>
 </div>
 
 <div class="card">
-<div class="stat-title">Review Required</div>
-<div class="stat-number">78</div>
-<div class="stat-change">6.2% of total</div>
+<div class="cardTitle">Review Required</div>
+<div class="number">78</div>
+<div class="yellow">6.2%</div>
 </div>
 
 <div class="card">
-<div class="stat-title">High Risk</div>
-<div class="stat-number">32</div>
-<div class="stat-change">2.6% detected</div>
+<div class="cardTitle">High Risk</div>
+<div class="number">32</div>
+<div class="red">2.6%</div>
 </div>
 
 </div>
@@ -776,24 +823,25 @@ AI-powered identity and document screening center
 
 <div class="card">
 
-<div class="section-title">
-<h3>Screening Activity</h3>
-<span class="badge low">LIVE</span>
+<div class="title">
+<h3>📊 Screening Activity</h3>
+<span class="badge badgeBlue">LIVE</span>
 </div>
 
 <div class="chart">
 
 <div class="bar" style="height:45%"></div>
-<div class="bar" style="height:62%"></div>
-<div class="bar" style="height:52%"></div>
-<div class="bar" style="height:78%"></div>
-<div class="bar" style="height:66%"></div>
-<div class="bar" style="height:91%"></div>
-<div class="bar" style="height:75%"></div>
+<div class="bar" style="height:65%"></div>
+<div class="bar" style="height:55%"></div>
+<div class="bar" style="height:80%"></div>
+<div class="bar" style="height:68%"></div>
+<div class="bar" style="height:92%"></div>
+<div class="bar" style="height:76%"></div>
 
 </div>
 
-<div class="chart-labels">
+<div class="days">
+
 <span>Mon</span>
 <span>Tue</span>
 <span>Wed</span>
@@ -801,6 +849,7 @@ AI-powered identity and document screening center
 <span>Fri</span>
 <span>Sat</span>
 <span>Sun</span>
+
 </div>
 
 </div>
@@ -808,26 +857,26 @@ AI-powered identity and document screening center
 
 <div class="card">
 
-<div class="section-title">
-<h3>Security Status</h3>
+<div class="title">
+<h3>🔐 System Health</h3>
 </div>
 
-<div class="security-item">
-<h4>🟢 AI Engine</h4>
+<div class="securityCard">
+<h3 class="green">● AI Engine</h3>
 <p>Operational</p>
 </div>
 
 <br>
 
-<div class="security-item">
-<h4>🟢 Document Scanner</h4>
+<div class="securityCard">
+<h3 class="green">● Scanner</h3>
 <p>Operational</p>
 </div>
 
 <br>
 
-<div class="security-item">
-<h4>🟢 Audit System</h4>
+<div class="securityCard">
+<h3 class="green">● Audit System</h3>
 <p>Operational</p>
 </div>
 
@@ -838,16 +887,24 @@ AI-powered identity and document screening center
 
 <div class="card" style="margin-top:18px">
 
-<div class="section-title">
-<h3>Recent Cases</h3>
-<button class="btn" onclick="showPage('cases')">View All</button>
+<div class="title">
+
+<h3>🚨 Recent Cases</h3>
+
+<button class="btn"
+style="width:auto;margin:0"
+onclick="showPage('cases')">
+View All
+</button>
+
 </div>
 
-<div class="table-wrap">
+<div class="tableBox">
 
 <table>
 
 <thead>
+
 <tr>
 <th>CASE ID</th>
 <th>DOCUMENT</th>
@@ -855,6 +912,7 @@ AI-powered identity and document screening center
 <th>STATUS</th>
 <th>TIME</th>
 </tr>
+
 </thead>
 
 <tbody>
@@ -863,7 +921,9 @@ AI-powered identity and document screening center
 <td>CASE-1024</td>
 <td>Aadhaar</td>
 <td>12%</td>
-<td><span class="badge verified">VERIFIED</span></td>
+<td>
+<span class="badge badgeGreen">VERIFIED</span>
+</td>
 <td>10:42 AM</td>
 </tr>
 
@@ -871,7 +931,9 @@ AI-powered identity and document screening center
 <td>CASE-1023</td>
 <td>PAN</td>
 <td>48%</td>
-<td><span class="badge review">REVIEW</span></td>
+<td>
+<span class="badge badgeYellow">REVIEW</span>
+</td>
 <td>10:36 AM</td>
 </tr>
 
@@ -879,7 +941,9 @@ AI-powered identity and document screening center
 <td>CASE-1022</td>
 <td>Passport</td>
 <td>91%</td>
-<td><span class="badge high">HIGH RISK</span></td>
+<td>
+<span class="badge badgeRed">HIGH RISK</span>
+</td>
 <td>10:28 AM</td>
 </tr>
 
@@ -894,61 +958,83 @@ AI-powered identity and document screening center
 </section>
 
 
-<!-- SCREENING -->
+<!-- =====================================================
+     SCREENING
+===================================================== -->
 
 <section id="screening" class="page">
 
-<div class="screen-grid">
+<div class="screenGrid">
 
 <div class="card">
 
-<div class="section-title">
-<h3>New Document Screening</h3>
-<span class="badge low">AI ENGINE READY</span>
+<div class="title">
+
+<h3>📄 New Document Screening</h3>
+
+<span class="badge badgeBlue">
+AI READY
+</span>
+
 </div>
 
 <label>Document Type</label>
 
 <select id="documentType">
+
 <option>Aadhaar Card</option>
 <option>PAN Card</option>
 <option>Passport</option>
 <option>Driving Licence</option>
 <option>Voter ID</option>
+
 </select>
-
-<br><br>
-
-<label>Upload Document</label>
-
-<label class="upload-box" for="fileInput">
-
-<div class="upload-icon">📤</div>
-
-<strong>Upload Identity Document</strong>
-
-<p style="color:#718aa4;margin-top:8px">
-JPG, PNG or PDF • Maximum 10 MB
-</p>
-
-<input id="fileInput"
-type="file"
-accept="image/*,.pdf"
-style="display:none"
-onchange="previewFile(event)">
-
-<img id="preview" class="preview">
-
-</label>
 
 <br>
 
-<button class="btn" style="width:100%" onclick="startAnalysis()">
+<label>Upload Document</label>
+
+<label class="upload">
+
+<div class="uploadIcon">
+📤
+</div>
+
+<b>Upload Identity Document</b>
+
+<p>
+JPG, PNG or PDF • Maximum 10 MB
+</p>
+
+<input
+id="file"
+type="file"
+accept="image/*,.pdf"
+style="display:none"
+onchange="previewDocument(event)"
+>
+
+<img
+id="preview"
+class="preview"
+>
+
+</label>
+
+<button
+class="btn"
+onclick="analyseDocument()"
+>
 🤖 Start AI Screening
 </button>
 
 <div class="progress">
-<div id="progressBar" class="progress-bar"></div>
+
+<div
+id="progressBar"
+class="progressBar">
+</div>
+
 </div>
 
 </div>
@@ -956,19 +1042,30 @@ onchange="previewFile(event)">
 
 <div class="card">
 
-<div class="section-title">
-<h3>AI Analysis Result</h3>
-<span class="badge low">READY</span>
+<div class="title">
+
+<h3>🤖 AI Analysis Result</h3>
+
+<span class="badge badgeBlue">
+READY
+</span>
+
 </div>
 
-<div id="analysisResult">
+<div id="result">
 
-<div style="text-align:center;padding:55px 15px;color:#7189a2">
+<div style="
+text-align:center;
+padding:60px 10px;
+color:#718aa3;
+">
 
-<div style="font-size:45px">🧠</div>
+<div style="font-size:45px">
+🧠
+</div>
 
 <p style="margin-top:12px">
-Upload a document and start AI screening
+Upload a document to begin analysis
 </p>
 
 </div>
@@ -982,32 +1079,43 @@ Upload a document and start AI screening
 </section>
 
 
-<!-- CASES -->
+<!-- =====================================================
+     CASES
+===================================================== -->
 
 <section id="cases" class="page">
 
 <div class="card">
 
-<div class="section-title">
-<h3>Case Management</h3>
-<button class="btn" onclick="showToast('New case workflow opened')">
+<div class="title">
+
+<h3>🚨 Case Management</h3>
+
+<button
+class="btn"
+style="width:auto;margin:0"
+onclick="toast('New case created')"
+>
 + New Case
 </button>
+
 </div>
 
-<div class="table-wrap">
+<div class="tableBox">
 
 <table>
 
 <thead>
+
 <tr>
 <th>CASE</th>
-<th>TYPE</th>
+<th>DOCUMENT</th>
 <th>OFFICER</th>
 <th>RISK</th>
 <th>STATUS</th>
 <th>ACTION</th>
 </tr>
+
 </thead>
 
 <tbody>
@@ -1017,8 +1125,16 @@ Upload a document and start AI screening
 <td>Aadhaar</td>
 <td>OFFICER001</td>
 <td>12%</td>
-<td><span class="badge verified">VERIFIED</span></td>
-<td><button class="btn" onclick="showToast('Case CASE-1024 opened')">View</button></td>
+<td>
+<span class="badge badgeGreen">VERIFIED</span>
+</td>
+<td>
+<button class="btn"
+style="width:auto;margin:0;padding:8px"
+onclick="toast('CASE-1024 opened')">
+View
+</button>
+</td>
 </tr>
 
 <tr>
@@ -1026,8 +1142,16 @@ Upload a document and start AI screening
 <td>PAN</td>
 <td>OFFICER002</td>
 <td>48%</td>
-<td><span class="badge review">REVIEW</span></td>
-<td><button class="btn" onclick="showToast('Case CASE-1023 opened')">View</button></td>
+<td>
+<span class="badge badgeYellow">REVIEW</span>
+</td>
+<td>
+<button class="btn"
+style="width:auto;margin:0;padding:8px"
+onclick="toast('CASE-1023 opened')">
+View
+</button>
+</td>
 </tr>
 
 <tr>
@@ -1035,8 +1159,16 @@ Upload a document and start AI screening
 <td>Passport</td>
 <td>OFFICER004</td>
 <td>91%</td>
-<td><span class="badge high">HIGH RISK</span></td>
-<td><button class="btn" onclick="showToast('Case CASE-1022 opened')">View</button></td>
+<td>
+<span class="badge badgeRed">HIGH RISK</span>
+</td>
+<td>
+<button class="btn"
+style="width:auto;margin:0;padding:8px"
+onclick="toast('CASE-1022 opened')">
+View
+</button>
+</td>
 </tr>
 
 <tr>
@@ -1044,8 +1176,16 @@ Upload a document and start AI screening
 <td>Driving Licence</td>
 <td>OFFICER003</td>
 <td>23%</td>
-<td><span class="badge low">LOW RISK</span></td>
-<td><button class="btn" onclick="showToast('Case CASE-1021 opened')">View</button></td>
+<td>
+<span class="badge badgeBlue">LOW RISK</span>
+</td>
+<td>
+<button class="btn"
+style="width:auto;margin:0;padding:8px"
+onclick="toast('CASE-1021 opened')">
+View
+</button>
+</td>
 </tr>
 
 </tbody>
@@ -1059,28 +1199,30 @@ Upload a document and start AI screening
 </section>
 
 
-<!-- REPORTS -->
+<!-- =====================================================
+     REPORTS
+===================================================== -->
 
 <section id="reports" class="page">
 
 <div class="stats">
 
 <div class="card">
-<div class="stat-title">Today's Screening</div>
-<div class="stat-number">86</div>
-<div class="stat-change">↑ 18% from yesterday</div>
+<div class="cardTitle">Today's Screening</div>
+<div class="number">86</div>
+<div class="green">↑ 18%</div>
 </div>
 
 <div class="card">
-<div class="stat-title">Average Time</div>
-<div class="stat-number">42s</div>
-<div class="stat-change">↓ 8 seconds improved</div>
+<div class="cardTitle">Average Time</div>
+<div class="number">42s</div>
+<div class="green">Improved</div>
 </div>
 
 <div class="card">
-<div class="stat-title">Detection Rate</div>
-<div class="stat-number">97.2%</div>
-<div class="stat-change">AI confidence</div>
+<div class="cardTitle">Detection Rate</div>
+<div class="number">97.2%</div>
+<div class="blue">AI Confidence</div>
 </div>
 
 </div>
@@ -1089,28 +1231,47 @@ Upload a document and start AI screening
 
 <div class="card">
 
-<div class="section-title">
-<h3>Screening Report</h3>
-<button class="btn" onclick="downloadReport()">⬇ Export Report</button>
+<div class="title">
+
+<h3>📈 Daily Security Report</h3>
+
+<button
+class="btn"
+style="width:auto;margin:0"
+onclick="exportReport()"
+>
+⬇ Export
+</button>
+
 </div>
 
 <div class="result">
 
-<h3>AI IdentityShield — Daily Security Report</h3>
+<h3>AI IdentityShield Report</h3>
 
 <br>
 
-<p>Documents screened: <b>86</b></p>
-<p>Verified documents: <b>67</b></p>
-<p>Review required: <b>14</b></p>
-<p>High-risk documents: <b>5</b></p>
-<p>Average processing time: <b>42 seconds</b></p>
+<p>Documents Screened: <b>86</b></p>
 
 <br>
 
-<p style="color:#7189a2">
-Report generated by AI IdentityShield prototype.
-</p>
+<p>Verified Documents: <b>67</b></p>
+
+<br>
+
+<p>Review Required: <b>14</b></p>
+
+<br>
+
+<p>High Risk Documents: <b>5</b></p>
+
+<br>
+
+<p>Average Screening Time: <b>42 seconds</b></p>
+
+<br>
+
+<p>AI Detection Rate: <b>97.2%</b></p>
 
 </div>
 
@@ -1119,86 +1280,111 @@ Report generated by AI IdentityShield prototype.
 </section>
 
 
-<!-- SECURITY -->
+<!-- =====================================================
+     SECURITY
+===================================================== -->
 
 <section id="security" class="page">
 
-<div class="security-grid">
+<div class="securityGrid">
 
-<div class="security-item">
-<h4>👆 Biometric Authentication</h4>
-<p id="bioStatus">
-Not registered on this device
-</p>
-<br>
-<button class="btn" onclick="registerBiometric()">
-Register Device
-</button>
-</div>
+<div class="securityCard">
 
-<div class="security-item">
-<h4>👁️ Eye / Face Check</h4>
+<h3>👆 Biometric</h3>
+
 <p>
-Camera-based liveness verification module.
+Device biometric authentication can be used
+as an additional security layer.
 </p>
-<br>
-<button class="btn" onclick="openEyeCheck()">
-Start Check
+
+<button
+class="btn"
+onclick="biometricDemo()"
+>
+Test Biometric
 </button>
+
 </div>
 
-<div class="security-item">
-<h4>🔒 Session Security</h4>
+
+<div class="securityCard">
+
+<h3>👁️ Eye / Face Check</h3>
+
 <p>
-Officer session is protected by authentication and activity monitoring.
+Camera-based liveness verification prototype.
 </p>
+
+<button
+class="btn"
+onclick="openCamera()"
+>
+Start Camera
+</button>
+
+</div>
+
+
+<div class="securityCard">
+
+<h3>🔒 Session</h3>
+
+<p>
+Officer session is currently authenticated.
+</p>
+
 <br>
-<span class="badge verified">ACTIVE</span>
-</div>
+
+<span class="badge badgeGreen">
+ACTIVE
+</span>
 
 </div>
 
-
-<div class="card" style="margin-top:18px">
-
-<div class="section-title">
-<h3>Security Activity Log</h3>
 </div>
 
-<div class="table-wrap">
 
-<table>
+<br>
+
+<div class="card">
+
+<div class="title">
+<h3>🔐 Security Activity Log</h3>
+</div>
+
+<div class="tableBox">
+
+<table id="logTable">
 
 <thead>
+
 <tr>
 <th>TIME</th>
 <th>EVENT</th>
 <th>OFFICER</th>
 <th>STATUS</th>
 </tr>
+
 </thead>
 
-<tbody id="securityLog">
+<tbody>
 
 <tr>
 <td>10:45 AM</td>
-<td>Dashboard login</td>
+<td>Officer Login</td>
 <td>OFFICER001</td>
-<td><span class="badge verified">SUCCESS</span></td>
+<td>
+<span class="badge badgeGreen">SUCCESS</span>
+</td>
 </tr>
 
 <tr>
 <td>10:42 AM</td>
-<td>Aadhaar screening</td>
+<td>Document Screening</td>
 <td>OFFICER001</td>
-<td><span class="badge verified">COMPLETED</span></td>
-</tr>
-
-<tr>
-<td>10:36 AM</td>
-<td>PAN screening</td>
-<td>OFFICER002</td>
-<td><span class="badge review">REVIEW</span></td>
+<td>
+<span class="badge badgeGreen">SUCCESS</span>
+</td>
 </tr>
 
 </tbody>
@@ -1216,89 +1402,50 @@ Officer session is protected by authentication and activity monitoring.
 </div>
 
 
-<!-- CAMERA MODAL -->
+<!-- =====================================================
+     CAMERA MODAL
+===================================================== -->
 
-<div id="eyeModal" class="modal">
+<div id="cameraModal" class="modal">
 
-<div class="modal-box">
+<div class="modalBox">
 
-<div class="section-title">
+<div class="title">
 
 <h3>👁️ Eye / Face Liveness Check</h3>
 
-<button class="btn btn-secondary" onclick="closeEyeCheck()">
+<button
+class="btn secondary"
+style="width:auto;margin:0"
+onclick="closeCamera()"
+>
 ✕
 </button>
 
 </div>
 
-<p style="color:#8aa1b9">
-Allow camera access and keep your face inside the frame.
-For this prototype, follow the on-screen liveness instruction.
+<p style="color:#7892aa">
+Allow camera access and keep your face visible.
+Look at the camera and blink naturally.
 </p>
 
-<video id="camera" class="camera" autoplay playsinline></video>
+<video
+id="camera"
+class="camera"
+autoplay
+playsinline>
+</video>
 
-<div id="eyeStatus" class="result">
-
+<div id="cameraStatus" class="result">
 Waiting for camera...
-
 </div>
 
-<div style="display:flex;gap:10px">
-
-<button class="btn" onclick="startCamera()">
+<button
+class="btn"
+onclick="startCamera()"
+>
 📷 Start Camera
 </button>
 
-<button class="btn btn-secondary" onclick="completeEyeCheck()">
-✓ Complete Check
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div id="toast" class="toast"></div>
-
-
-<script>
-
-/* =========================
-   CONFIGURATION
-========================= */
-
-const DEMO_OFFICER = "OFFICER001";
-const DEMO_PASSWORD = "AIShield@2026";
-
-let cameraStream = null;
-
-
-/* =========================
-   PASSWORD LOGIN
-========================= */
-
-function passwordLogin(){
-
-    const officer =
-        document.getElementById("officerId").value.trim();
-
-    const password =
-        document.getElementById("password").value;
-
-    if(officer !== DEMO_OFFICER ||
-       password !== DEMO_PASSWORD){
-
-        showToast("❌ Invalid Officer ID or Password");
-        return;
-    }
-
-    loginSuccess(officer,"Password");
-
-}
-
-
-/* ===
+<button
+cl
