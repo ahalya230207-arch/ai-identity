@@ -3,135 +3,136 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AI IdentityShield</title>
 
 <style>
+
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:Arial, sans-serif;
 }
 
 body{
-    background:#06101d;
-    color:#fff;
+    background:#07111f;
+    color:white;
 }
 
-/* ================= LOGIN ================= */
+/* LOGIN */
 
 #loginPage{
     min-height:100vh;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#06101d,#0d2945,#06101d);
     padding:20px;
-    background:linear-gradient(135deg,#06101d,#0b2742,#06101d);
 }
 
-.login-box{
+.loginBox{
     width:100%;
-    max-width:430px;
-    background:#0c1d30;
-    border:1px solid #2b4d6d;
+    max-width:400px;
+    background:#0d1e31;
+    border:1px solid #31506d;
     border-radius:22px;
-    padding:32px;
-    box-shadow:0 20px 70px rgba(0,0,0,.5);
+    padding:35px 28px;
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
 }
 
 .logo{
     width:75px;
     height:75px;
     margin:auto;
+    border-radius:20px;
+    background:linear-gradient(135deg,#159ee5,#4b45ec);
     display:flex;
     align-items:center;
     justify-content:center;
-    background:linear-gradient(135deg,#0da9ed,#5147ed);
-    border-radius:22px;
     font-size:38px;
 }
 
-.login-box h1{
+.loginBox h1{
     text-align:center;
-    margin-top:15px;
+    margin-top:16px;
     font-size:27px;
 }
 
-.login-box .sub{
+.loginBox p{
     text-align:center;
-    color:#8da6bd;
-    margin:8px 0 25px;
+    color:#91a8bd;
     font-size:13px;
+    margin-top:8px;
 }
 
 label{
     display:block;
-    color:#b7c9da;
-    font-size:13px;
-    margin:14px 0 6px;
+    margin-top:25px;
+    margin-bottom:7px;
+    color:#b9cada;
+    font-size:14px;
 }
 
-input,select{
+input{
     width:100%;
-    padding:14px;
+    padding:15px;
     border-radius:10px;
-    border:1px solid #31516e;
+    border:1px solid #31506d;
     background:#071625;
-    color:#fff;
+    color:white;
+    font-size:16px;
     outline:none;
 }
 
-input:focus,select:focus{
-    border-color:#18c7ff;
+input:focus{
+    border-color:#19c8ff;
 }
 
-.btn{
+.loginButton{
     width:100%;
-    padding:14px;
-    margin-top:14px;
+    margin-top:22px;
+    padding:15px;
     border:0;
     border-radius:10px;
-    color:#fff;
+    background:linear-gradient(135deg,#119fe5,#4e43ed);
+    color:white;
+    font-size:16px;
     font-weight:bold;
     cursor:pointer;
-    background:linear-gradient(135deg,#0e9bdf,#5045ed);
 }
 
-.btn:hover{
-    opacity:.9;
-}
-
-.secondary{
-    background:#142d46;
-    border:1px solid #31516e;
-}
-
-.demo{
-    margin-top:18px;
-    padding:13px;
-    text-align:center;
-    background:#071625;
-    border-radius:10px;
-    color:#8ca4bb;
-    font-size:12px;
-}
-
-.demo b{
-    color:#fff;
+.loginButton:active{
+    transform:scale(.98);
 }
 
 .error{
     display:none;
-    margin-top:12px;
+    text-align:center;
+    color:#ff7585;
+    background:#401b24;
     padding:10px;
     border-radius:8px;
-    background:#421b25;
-    color:#ff8997;
-    text-align:center;
+    margin-top:14px;
     font-size:13px;
 }
 
-/* ================= APP ================= */
+.demo{
+    margin-top:20px;
+    background:#071625;
+    padding:13px;
+    border-radius:10px;
+    text-align:center;
+    color:#91a8bd;
+    font-size:12px;
+}
+
+.demo b{
+    color:white;
+}
+
+
+/* APPLICATION */
 
 #app{
     display:none;
@@ -142,29 +143,27 @@ input:focus,select:focus{
     left:0;
     top:0;
     bottom:0;
-    width:245px;
+    width:240px;
     background:#091827;
-    border-right:1px solid #203b55;
+    border-right:1px solid #213c55;
     padding:20px 14px;
-    z-index:10;
 }
 
 .brand{
     display:flex;
     align-items:center;
     gap:10px;
-    padding:8px;
-    margin-bottom:25px;
+    margin-bottom:28px;
 }
 
 .brandIcon{
     width:43px;
     height:43px;
+    background:#176bd4;
+    border-radius:12px;
     display:flex;
     align-items:center;
     justify-content:center;
-    background:#126bd9;
-    border-radius:12px;
     font-size:22px;
 }
 
@@ -173,53 +172,53 @@ input:focus,select:focus{
 }
 
 .brandText small{
-    color:#7089a2;
+    color:#718ba4;
 }
 
 .nav button{
     width:100%;
-    padding:13px;
-    margin:4px 0;
     border:0;
+    background:transparent;
+    color:#8da5bb;
+    padding:13px;
+    margin:3px 0;
     border-radius:9px;
     text-align:left;
-    background:transparent;
-    color:#91a8bd;
     cursor:pointer;
 }
 
 .nav button:hover,
 .nav button.active{
-    background:#12324e;
-    color:#fff;
+    background:#12314c;
+    color:white;
 }
 
 .officer{
     position:absolute;
-    bottom:20px;
     left:14px;
     right:14px;
+    bottom:20px;
     background:#10263d;
     padding:13px;
     border-radius:10px;
 }
 
 .officer small{
-    color:#718aa3;
+    color:#718ba4;
 }
 
 .officer b{
     display:block;
-    margin:4px 0;
+    margin:5px 0;
 }
 
 .online{
-    color:#40e5a4;
+    color:#42e5a5;
     font-size:12px;
 }
 
 .main{
-    margin-left:245px;
+    margin-left:240px;
     padding:25px;
 }
 
@@ -235,19 +234,20 @@ input:focus,select:focus{
 }
 
 .top p{
-    color:#7892aa;
+    color:#7891a8;
     margin-top:5px;
 }
 
 .system{
-    background:#0c3028;
-    color:#40e5a4;
+    background:#0b3028;
+    color:#43e5a5;
     padding:9px 13px;
     border-radius:20px;
-    font-size:12px;
+    font-size:11px;
 }
 
-/* ================= PAGES ================= */
+
+/* PAGES */
 
 .page{
     display:none;
@@ -257,7 +257,8 @@ input:focus,select:focus{
     display:block;
 }
 
-/* ================= CARDS ================= */
+
+/* CARDS */
 
 .stats{
     display:grid;
@@ -266,14 +267,14 @@ input:focus,select:focus{
 }
 
 .card{
-    background:#0c1c2d;
-    border:1px solid #213c56;
+    background:#0d1d2f;
+    border:1px solid #213c55;
     border-radius:15px;
     padding:20px;
 }
 
 .cardTitle{
-    color:#7892aa;
+    color:#7891a8;
     font-size:13px;
 }
 
@@ -284,20 +285,23 @@ input:focus,select:focus{
 }
 
 .green{
-    color:#40e5a4;
+    color:#43e5a5;
 }
 
 .yellow{
-    color:#f1d05d;
+    color:#f1d15c;
 }
 
 .red{
-    color:#ff687a;
+    color:#ff7181;
 }
 
 .blue{
-    color:#52d8ff;
+    color:#54d8ff;
 }
+
+
+/* GRID */
 
 .grid{
     display:grid;
@@ -310,69 +314,44 @@ input:focus,select:focus{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:17px;
+    margin-bottom:18px;
 }
 
 .title h3{
     font-size:17px;
 }
 
-.badge{
-    padding:5px 9px;
-    border-radius:15px;
-    font-size:10px;
-    font-weight:bold;
-}
 
-.badgeGreen{
-    background:#0b382b;
-    color:#43e5a6;
-}
-
-.badgeYellow{
-    background:#403610;
-    color:#f1d15d;
-}
-
-.badgeRed{
-    background:#421b25;
-    color:#ff7080;
-}
-
-.badgeBlue{
-    background:#10374a;
-    color:#58d8ff;
-}
-
-/* ================= CHART ================= */
+/* CHART */
 
 .chart{
     height:220px;
     display:flex;
     align-items:end;
     gap:12px;
-    padding:15px 5px 0;
 }
 
 .bar{
     flex:1;
-    background:linear-gradient(to top,#1471e4,#1ccaff);
+    background:linear-gradient(to top,#1472e5,#1ccaff);
     border-radius:5px 5px 0 0;
 }
 
 .days{
     display:flex;
     gap:12px;
+    margin-top:5px;
 }
 
 .days span{
     flex:1;
     text-align:center;
-    color:#7189a0;
+    color:#7189a1;
     font-size:10px;
 }
 
-/* ================= TABLE ================= */
+
+/* TABLE */
 
 .tableBox{
     overflow-x:auto;
@@ -385,18 +364,62 @@ table{
 
 th,td{
     padding:13px;
-    text-align:left;
     border-bottom:1px solid #1b344b;
+    text-align:left;
     font-size:13px;
     white-space:nowrap;
 }
 
 th{
-    color:#718aa2;
+    color:#7189a1;
     font-size:11px;
 }
 
-/* ================= SCREENING ================= */
+
+/* BADGES */
+
+.badge{
+    padding:5px 9px;
+    border-radius:15px;
+    font-size:10px;
+    font-weight:bold;
+}
+
+.verified{
+    background:#0b382b;
+    color:#43e5a5;
+}
+
+.review{
+    background:#413710;
+    color:#f1d15c;
+}
+
+.high{
+    background:#421b25;
+    color:#ff7181;
+}
+
+.low{
+    background:#10384a;
+    color:#55d9ff;
+}
+
+
+/* BUTTON */
+
+.btn{
+    padding:10px 14px;
+    border:0;
+    border-radius:8px;
+    background:linear-gradient(135deg,#119fe5,#4e43ed);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+
+/* SCREENING */
 
 .screenGrid{
     display:grid;
@@ -405,57 +428,53 @@ th{
 }
 
 .upload{
+    display:block;
     border:2px dashed #315875;
-    background:#081827;
     border-radius:15px;
     padding:40px 20px;
     text-align:center;
+    background:#081827;
     cursor:pointer;
-}
-
-.upload:hover{
-    border-color:#16caff;
 }
 
 .uploadIcon{
     font-size:45px;
-    margin-bottom:12px;
+    margin-bottom:10px;
 }
 
 .upload p{
-    color:#718aa3;
+    color:#7189a1;
     margin-top:7px;
     font-size:12px;
 }
 
 .preview{
-    display:none;
     max-width:100%;
-    max-height:250px;
-    margin:15px auto 0;
+    max-height:230px;
+    margin-top:15px;
+    display:none;
     border-radius:10px;
 }
 
 .progress{
-    width:100%;
     height:9px;
     background:#182b40;
-    margin-top:15px;
     border-radius:20px;
-    overflow:hidden;
+    margin-top:15px;
 }
 
 .progressBar{
     height:100%;
-    width:0;
-    background:linear-gradient(90deg,#16caff,#5547ed);
+    width:0%;
+    background:linear-gradient(90deg,#18caff,#5546ed);
+    border-radius:20px;
 }
 
 .result{
     background:#081827;
-    border:1px solid #23435d;
+    border:1px solid #24435d;
     padding:20px;
-    border-radius:13px;
+    border-radius:12px;
 }
 
 .risk{
@@ -467,13 +486,14 @@ th{
 .indicator{
     display:flex;
     justify-content:space-between;
-    background:#102235;
     padding:12px;
-    margin-top:8px;
+    background:#102235;
     border-radius:8px;
+    margin-top:8px;
 }
 
-/* ================= SECURITY ================= */
+
+/* SECURITY */
 
 .securityGrid{
     display:grid;
@@ -482,67 +502,36 @@ th{
 }
 
 .securityCard{
-    background:#0c1c2d;
-    border:1px solid #213c56;
+    background:#0d1d2f;
+    border:1px solid #213c55;
     padding:20px;
     border-radius:14px;
-}
-
-.securityCard h3{
-    margin-bottom:10px;
 }
 
 .securityCard p{
     color:#7891a8;
     font-size:13px;
     line-height:1.5;
+    margin:10px 0;
 }
 
-/* ================= CAMERA ================= */
 
-.modal{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.8);
-    display:none;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-    z-index:100;
-}
-
-.modalBox{
-    width:100%;
-    max-width:600px;
-    background:#0c1c2d;
-    border:1px solid #31516e;
-    border-radius:18px;
-    padding:22px;
-}
-
-.camera{
-    width:100%;
-    max-height:400px;
-    background:#000;
-    border-radius:12px;
-    margin:15px 0;
-}
-
-/* ================= TOAST ================= */
+/* TOAST */
 
 #toast{
     display:none;
     position:fixed;
     right:20px;
     bottom:20px;
-    background:#112a42;
+    background:#122b43;
     border:1px solid #315875;
     padding:14px 18px;
     border-radius:10px;
     z-index:200;
 }
 
-/* ================= MOBILE ================= */
+
+/* MOBILE */
 
 @media(max-width:1050px){
 
@@ -609,75 +598,61 @@ th{
     .system{
         font-size:9px;
     }
-
-    .login-box{
-        padding:25px 18px;
-    }
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- =====================================================
-     LOGIN PAGE
-===================================================== -->
+
+<!-- ==================================================
+     LOGIN
+================================================== -->
 
 <div id="loginPage">
 
-<div class="login-box">
+<div class="loginBox">
 
-<div class="logo">🛡️</div>
+<div class="logo">
+🛡️
+</div>
 
 <h1>AI IdentityShield</h1>
 
-<p class="sub">
-AI-Based Fake Identity & Document Screening System
+<p>
+AI-Based Fake Identity & Document Screening
 </p>
 
-<label>Officer ID</label>
+<label>
+Enter Password
+</label>
 
 <input
-id="officerID"
-type="text"
-placeholder="Enter Officer ID"
-autocomplete="off"
+    id="password"
+    type="password"
+    placeholder="Enter password"
 >
 
-<label>Password</label>
-
-<input
-id="password"
-type="password"
-placeholder="Enter Password"
+<button
+    class="loginButton"
+    onclick="login()"
 >
-
-<button class="btn" onclick="login()">
-🔐 Secure Login
+🔐 LOGIN
 </button>
 
-<button class="btn secondary" onclick="biometricDemo()">
-👆 Fingerprint / Device Biometric
-</button>
-
-<button class="btn secondary" onclick="openCamera()">
-👁️ Eye / Face Liveness Check
-</button>
-
-<div id="loginError" class="error">
-❌ Invalid Officer ID or Password
+<div
+    id="error"
+    class="error"
+>
+❌ Incorrect password. Try again.
 </div>
 
 <div class="demo">
 
-Demo Login<br>
-
-Officer ID:
-<b>OFFICER001</b>
-
+Demo Password:
 <br>
 
-Password:
 <b>123456</b>
 
 </div>
@@ -687,11 +662,14 @@ Password:
 </div>
 
 
-<!-- =====================================================
-     MAIN APPLICATION
-===================================================== -->
+<!-- ==================================================
+     APPLICATION
+================================================== -->
 
 <div id="app">
+
+
+<!-- SIDEBAR -->
 
 <aside class="sidebar">
 
@@ -702,8 +680,13 @@ Password:
 </div>
 
 <div class="brandText">
+
 <b>IdentityShield</b>
-<small>Security Platform</small>
+
+<small>
+Security Platform
+</small>
+
 </div>
 
 </div>
@@ -711,24 +694,35 @@ Password:
 
 <div class="nav">
 
-<button class="active" onclick="showPage('dashboard',this)">
+<button
+class="active"
+onclick="showPage('dashboard',this)"
+>
 📊 <span>Dashboard</span>
 </button>
 
-<button onclick="showPage('screening',this)">
-📄 <span>Document Screening</span>
+<button
+onclick="showPage('screening',this)"
+>
+📄 <span>Screening</span>
 </button>
 
-<button onclick="showPage('cases',this)">
+<button
+onclick="showPage('cases',this)"
+>
 🚨 <span>Cases</span>
 </button>
 
-<button onclick="showPage('reports',this)">
+<button
+onclick="showPage('reports',this)"
+>
 📈 <span>Reports</span>
 </button>
 
-<button onclick="showPage('security',this)">
-🔐 <span>Security Center</span>
+<button
+onclick="showPage('security',this)"
+>
+🔐 <span>Security</span>
 </button>
 
 <button onclick="logout()">
@@ -740,9 +734,11 @@ Password:
 
 <div class="officer">
 
-<small>Logged Officer</small>
+<small>
+Logged Officer
+</small>
 
-<b id="currentOfficer">
+<b>
 OFFICER001
 </b>
 
@@ -755,7 +751,10 @@ OFFICER001
 </aside>
 
 
+<!-- MAIN -->
+
 <main class="main">
+
 
 <div class="top">
 
@@ -778,42 +777,99 @@ AI-powered identity verification center
 </div>
 
 
-<!-- =====================================================
+<!-- ==================================================
      DASHBOARD
-===================================================== -->
+================================================== -->
 
-<section id="dashboard" class="page active">
+<section
+id="dashboard"
+class="page active"
+>
 
 <div class="stats">
 
 <div class="card">
-<div class="cardTitle">Total Documents</div>
-<div class="number">1,248</div>
-<div class="green">↑ 12.4%</div>
+
+<div class="cardTitle">
+Total Documents
 </div>
 
-<div class="card">
-<div class="cardTitle">Verified</div>
-<div class="number">982</div>
-<div class="green">78.7%</div>
+<div class="number">
+1,248
 </div>
 
-<div class="card">
-<div class="cardTitle">Low Risk</div>
-<div class="number">156</div>
-<div class="blue">12.5%</div>
+<div class="green">
+↑ 12.4%
 </div>
 
-<div class="card">
-<div class="cardTitle">Review Required</div>
-<div class="number">78</div>
-<div class="yellow">6.2%</div>
 </div>
 
+
 <div class="card">
-<div class="cardTitle">High Risk</div>
-<div class="number">32</div>
-<div class="red">2.6%</div>
+
+<div class="cardTitle">
+Verified
+</div>
+
+<div class="number">
+982
+</div>
+
+<div class="green">
+78.7%
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="cardTitle">
+Low Risk
+</div>
+
+<div class="number">
+156
+</div>
+
+<div class="blue">
+12.5%
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="cardTitle">
+Review Required
+</div>
+
+<div class="number">
+78
+</div>
+
+<div class="yellow">
+6.2%
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="cardTitle">
+High Risk
+</div>
+
+<div class="number">
+32
+</div>
+
+<div class="red">
+2.6%
+</div>
+
 </div>
 
 </div>
@@ -821,12 +877,21 @@ AI-powered identity verification center
 
 <div class="grid">
 
+
 <div class="card">
 
 <div class="title">
-<h3>📊 Screening Activity</h3>
-<span class="badge badgeBlue">LIVE</span>
+
+<h3>
+📊 Screening Activity
+</h3>
+
+<span class="badge low">
+LIVE
+</span>
+
 </div>
+
 
 <div class="chart">
 
@@ -839,6 +904,7 @@ AI-powered identity verification center
 <div class="bar" style="height:76%"></div>
 
 </div>
+
 
 <div class="days">
 
@@ -862,22 +928,34 @@ AI-powered identity verification center
 </div>
 
 <div class="securityCard">
-<h3 class="green">● AI Engine</h3>
-<p>Operational</p>
+<h3 class="green">
+● AI Engine
+</h3>
+<p>
+Operational
+</p>
 </div>
 
 <br>
 
 <div class="securityCard">
-<h3 class="green">● Scanner</h3>
-<p>Operational</p>
+<h3 class="green">
+● Document Scanner
+</h3>
+<p>
+Operational
+</p>
 </div>
 
 <br>
 
 <div class="securityCard">
-<h3 class="green">● Audit System</h3>
-<p>Operational</p>
+<h3 class="green">
+● Audit System
+</h3>
+<p>
+Operational
+</p>
 </div>
 
 </div>
@@ -889,15 +967,19 @@ AI-powered identity verification center
 
 <div class="title">
 
-<h3>🚨 Recent Cases</h3>
+<h3>
+🚨 Recent Cases
+</h3>
 
-<button class="btn"
-style="width:auto;margin:0"
-onclick="showPage('cases')">
+<button
+class="btn"
+onclick="showPage('cases')"
+>
 View All
 </button>
 
 </div>
+
 
 <div class="tableBox">
 
@@ -918,33 +1000,53 @@ View All
 <tbody>
 
 <tr>
+
 <td>CASE-1024</td>
 <td>Aadhaar</td>
 <td>12%</td>
+
 <td>
-<span class="badge badgeGreen">VERIFIED</span>
+<span class="badge verified">
+VERIFIED
+</span>
 </td>
+
 <td>10:42 AM</td>
+
 </tr>
 
+
 <tr>
+
 <td>CASE-1023</td>
 <td>PAN</td>
 <td>48%</td>
+
 <td>
-<span class="badge badgeYellow">REVIEW</span>
+<span class="badge review">
+REVIEW
+</span>
 </td>
+
 <td>10:36 AM</td>
+
 </tr>
 
+
 <tr>
+
 <td>CASE-1022</td>
 <td>Passport</td>
 <td>91%</td>
+
 <td>
-<span class="badge badgeRed">HIGH RISK</span>
+<span class="badge high">
+HIGH RISK
+</span>
 </td>
+
 <td>10:28 AM</td>
+
 </tr>
 
 </tbody>
@@ -958,27 +1060,36 @@ View All
 </section>
 
 
-<!-- =====================================================
+<!-- ==================================================
      SCREENING
-===================================================== -->
+================================================== -->
 
-<section id="screening" class="page">
+<section
+id="screening"
+class="page"
+>
 
 <div class="screenGrid">
+
 
 <div class="card">
 
 <div class="title">
 
-<h3>📄 New Document Screening</h3>
+<h3>
+📄 Document Screening
+</h3>
 
-<span class="badge badgeBlue">
+<span class="badge low">
 AI READY
 </span>
 
 </div>
 
-<label>Document Type</label>
+
+<label>
+Document Type
+</label>
 
 <select id="documentType">
 
@@ -990,9 +1101,11 @@ AI READY
 
 </select>
 
-<br>
 
-<label>Upload Document</label>
+<label>
+Upload Document
+</label>
+
 
 <label class="upload">
 
@@ -1000,10 +1113,12 @@ AI READY
 📤
 </div>
 
-<b>Upload Identity Document</b>
+<b>
+Upload Identity Document
+</b>
 
 <p>
-JPG, PNG or PDF • Maximum 10 MB
+JPG, PNG or PDF
 </p>
 
 <input
@@ -1011,7 +1126,7 @@ id="file"
 type="file"
 accept="image/*,.pdf"
 style="display:none"
-onchange="previewDocument(event)"
+onchange="previewFile(event)"
 >
 
 <img
@@ -1021,18 +1136,22 @@ class="preview"
 
 </label>
 
+
 <button
 class="btn"
-onclick="analyseDocument()"
+style="width:100%;margin-top:15px"
+onclick="analyse()"
 >
 🤖 Start AI Screening
 </button>
+
 
 <div class="progress">
 
 <div
 id="progressBar"
-class="progressBar">
+class="progressBar"
+>
 </div>
 
 </div>
@@ -1044,28 +1163,27 @@ class="progressBar">
 
 <div class="title">
 
-<h3>🤖 AI Analysis Result</h3>
-
-<span class="badge badgeBlue">
-READY
-</span>
+<h3>
+🤖 AI Analysis
+</h3>
 
 </div>
+
 
 <div id="result">
 
 <div style="
 text-align:center;
 padding:60px 10px;
-color:#718aa3;
+color:#7189a1;
 ">
 
 <div style="font-size:45px">
 🧠
 </div>
 
-<p style="margin-top:12px">
-Upload a document to begin analysis
+<p>
+Upload a document to start analysis
 </p>
 
 </div>
@@ -1079,27 +1197,32 @@ Upload a document to begin analysis
 </section>
 
 
-<!-- =====================================================
+<!-- ==================================================
      CASES
-===================================================== -->
+================================================== -->
 
-<section id="cases" class="page">
+<section
+id="cases"
+class="page"
+>
 
 <div class="card">
 
 <div class="title">
 
-<h3>🚨 Case Management</h3>
+<h3>
+🚨 Case Management
+</h3>
 
 <button
 class="btn"
-style="width:auto;margin:0"
 onclick="toast('New case created')"
 >
 + New Case
 </button>
 
 </div>
+
 
 <div class="tableBox">
 
@@ -1113,7 +1236,6 @@ onclick="toast('New case created')"
 <th>OFFICER</th>
 <th>RISK</th>
 <th>STATUS</th>
-<th>ACTION</th>
 </tr>
 
 </thead>
@@ -1126,14 +1248,9 @@ onclick="toast('New case created')"
 <td>OFFICER001</td>
 <td>12%</td>
 <td>
-<span class="badge badgeGreen">VERIFIED</span>
-</td>
-<td>
-<button class="btn"
-style="width:auto;margin:0;padding:8px"
-onclick="toast('CASE-1024 opened')">
-View
-</button>
+<span class="badge verified">
+VERIFIED
+</span>
 </td>
 </tr>
 
@@ -1143,14 +1260,9 @@ View
 <td>OFFICER002</td>
 <td>48%</td>
 <td>
-<span class="badge badgeYellow">REVIEW</span>
-</td>
-<td>
-<button class="btn"
-style="width:auto;margin:0;padding:8px"
-onclick="toast('CASE-1023 opened')">
-View
-</button>
+<span class="badge review">
+REVIEW
+</span>
 </td>
 </tr>
 
@@ -1160,14 +1272,9 @@ View
 <td>OFFICER004</td>
 <td>91%</td>
 <td>
-<span class="badge badgeRed">HIGH RISK</span>
-</td>
-<td>
-<button class="btn"
-style="width:auto;margin:0;padding:8px"
-onclick="toast('CASE-1022 opened')">
-View
-</button>
+<span class="badge high">
+HIGH RISK
+</span>
 </td>
 </tr>
 
@@ -1177,14 +1284,9 @@ View
 <td>OFFICER003</td>
 <td>23%</td>
 <td>
-<span class="badge badgeBlue">LOW RISK</span>
-</td>
-<td>
-<button class="btn"
-style="width:auto;margin:0;padding:8px"
-onclick="toast('CASE-1021 opened')">
-View
-</button>
+<span class="badge low">
+LOW RISK
+</span>
 </td>
 </tr>
 
@@ -1199,45 +1301,83 @@ View
 </section>
 
 
-<!-- =====================================================
+<!-- ==================================================
      REPORTS
-===================================================== -->
+================================================== -->
 
-<section id="reports" class="page">
+<section
+id="reports"
+class="page"
+>
 
 <div class="stats">
 
 <div class="card">
-<div class="cardTitle">Today's Screening</div>
-<div class="number">86</div>
-<div class="green">↑ 18%</div>
+
+<div class="cardTitle">
+Today's Screening
 </div>
+
+<div class="number">
+86
+</div>
+
+<div class="green">
+↑ 18%
+</div>
+
+</div>
+
 
 <div class="card">
-<div class="cardTitle">Average Time</div>
-<div class="number">42s</div>
-<div class="green">Improved</div>
+
+<div class="cardTitle">
+Average Time
 </div>
+
+<div class="number">
+42s
+</div>
+
+<div class="green">
+Improved
+</div>
+
+</div>
+
 
 <div class="card">
-<div class="cardTitle">Detection Rate</div>
-<div class="number">97.2%</div>
-<div class="blue">AI Confidence</div>
+
+<div class="cardTitle">
+Detection Rate
+</div>
+
+<div class="number">
+97.2%
+</div>
+
+<div class="blue">
+AI Confidence
 </div>
 
 </div>
+
+</div>
+
 
 <br>
+
 
 <div class="card">
 
 <div class="title">
 
-<h3>📈 Daily Security Report</h3>
+<h3>
+📈 Daily Security Report
+</h3>
 
 <button
 class="btn"
-style="width:auto;margin:0"
 onclick="exportReport()"
 >
 ⬇ Export
@@ -1245,33 +1385,47 @@ onclick="exportReport()"
 
 </div>
 
+
 <div class="result">
 
-<h3>AI IdentityShield Report</h3>
+<h3>
+AI IdentityShield Report
+</h3>
 
 <br>
 
-<p>Documents Screened: <b>86</b></p>
+<p>
+Documents Screened:
+<b>86</b>
+</p>
 
 <br>
 
-<p>Verified Documents: <b>67</b></p>
+<p>
+Verified:
+<b>67</b>
+</p>
 
 <br>
 
-<p>Review Required: <b>14</b></p>
+<p>
+Review Required:
+<b>14</b>
+</p>
 
 <br>
 
-<p>High Risk Documents: <b>5</b></p>
+<p>
+High Risk:
+<b>5</b>
+</p>
 
 <br>
 
-<p>Average Screening Time: <b>42 seconds</b></p>
-
-<br>
-
-<p>AI Detection Rate: <b>97.2%</b></p>
+<p>
+Average Screening Time:
+<b>42 seconds</b>
+</p>
 
 </div>
 
@@ -1280,63 +1434,68 @@ onclick="exportReport()"
 </section>
 
 
-<!-- =====================================================
+<!-- ==================================================
      SECURITY
-===================================================== -->
+================================================== -->
 
-<section id="security" class="page">
+<section
+id="security"
+class="page"
+>
 
 <div class="securityGrid">
 
-<div class="securityCard">
-
-<h3>👆 Biometric</h3>
-
-<p>
-Device biometric authentication can be used
-as an additional security layer.
-</p>
-
-<button
-class="btn"
-onclick="biometricDemo()"
->
-Test Biometric
-</button>
-
-</div>
-
 
 <div class="securityCard">
 
-<h3>👁️ Eye / Face Check</h3>
+<h3>
+🔐 Authentication
+</h3>
 
 <p>
-Camera-based liveness verification prototype.
+Officer session authenticated successfully.
 </p>
 
-<button
-class="btn"
-onclick="openCamera()"
->
-Start Camera
-</button>
-
-</div>
-
-
-<div class="securityCard">
-
-<h3>🔒 Session</h3>
-
-<p>
-Officer session is currently authenticated.
-</p>
-
-<br>
-
-<span class="badge badgeGreen">
+<span class="badge verified">
 ACTIVE
+</span>
+
+</div>
+
+
+<div class="securityCard">
+
+<h3>
+👁️ Eye / Face Check
+</h3>
+
+<p>
+Camera-based liveness verification module.
+</p>
+
+<button
+class="btn"
+onclick="toast('Camera liveness module ready')"
+>
+Start Check
+</button>
+
+</div>
+
+
+<div class="securityCard">
+
+<h3>
+🛡️ System Security
+</h3>
+
+<p>
+AI screening and audit monitoring systems
+are currently operational.
+</p>
+
+<span class="badge verified">
+SECURE
 </span>
 
 </div>
@@ -1346,22 +1505,26 @@ ACTIVE
 
 <br>
 
+
 <div class="card">
 
 <div class="title">
-<h3>🔐 Security Activity Log</h3>
+
+<h3>
+📋 Security Activity
+</h3>
+
 </div>
 
 <div class="tableBox">
 
-<table id="logTable">
+<table>
 
 <thead>
 
 <tr>
 <th>TIME</th>
 <th>EVENT</th>
-<th>OFFICER</th>
 <th>STATUS</th>
 </tr>
 
@@ -1372,18 +1535,30 @@ ACTIVE
 <tr>
 <td>10:45 AM</td>
 <td>Officer Login</td>
-<td>OFFICER001</td>
 <td>
-<span class="badge badgeGreen">SUCCESS</span>
+<span class="badge verified">
+SUCCESS
+</span>
 </td>
 </tr>
 
 <tr>
 <td>10:42 AM</td>
 <td>Document Screening</td>
-<td>OFFICER001</td>
 <td>
-<span class="badge badgeGreen">SUCCESS</span>
+<span class="badge verified">
+SUCCESS
+</span>
+</td>
+</tr>
+
+<tr>
+<td>10:30 AM</td>
+<td>Security Check</td>
+<td>
+<span class="badge verified">
+SUCCESS
+</span>
 </td>
 </tr>
 
@@ -1397,55 +1572,158 @@ ACTIVE
 
 </section>
 
+
 </main>
 
 </div>
 
 
-<!-- =====================================================
-     CAMERA MODAL
-===================================================== -->
+<div id="toast"></div>
 
-<div id="cameraModal" class="modal">
 
-<div class="modalBox">
+<script>
 
-<div class="title">
+/* ============================================
+   ONLY PASSWORD NEEDED
+============================================ */
 
-<h3>👁️ Eye / Face Liveness Check</h3>
+const LOGIN_PASSWORD = "123456";
 
-<button
-class="btn secondary"
-style="width:auto;margin:0"
-onclick="closeCamera()"
->
-✕
-</button>
 
-</div>
+/* ============================================
+   LOGIN
+============================================ */
 
-<p style="color:#7892aa">
-Allow camera access and keep your face visible.
-Look at the camera and blink naturally.
-</p>
+function login(){
 
-<video
-id="camera"
-class="camera"
-autoplay
-playsinline>
-</video>
+    const password =
+        document
+        .getElementById("password")
+        .value;
 
-<div id="cameraStatus" class="result">
-Waiting for camera...
-</div>
+    const error =
+        document
+        .getElementById("error");
 
-<button
-class="btn"
-onclick="startCamera()"
->
-📷 Start Camera
-</button>
+    if(password === LOGIN_PASSWORD){
 
-<button
-cl
+        error.style.display = "none";
+
+        document
+        .getElementById("loginPage")
+        .style.display = "none";
+
+        document
+        .getElementById("app")
+        .style.display = "block";
+
+        toast("✅ Login successful");
+
+    }
+
+    else{
+
+        error.style.display = "block";
+
+        document
+        .getElementById("password")
+        .value = "";
+
+    }
+
+}
+
+
+/* ENTER KEY */
+
+document
+.getElementById("password")
+.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Enter"){
+            login();
+        }
+
+    }
+);
+
+
+/* ============================================
+   NAVIGATION
+============================================ */
+
+function showPage(page,button){
+
+    document
+    .querySelectorAll(".page")
+    .forEach(function(p){
+
+        p.classList.remove("active");
+
+    });
+
+
+    document
+    .getElementById(page)
+    .classList.add("active");
+
+
+    document
+    .querySelectorAll(".nav button")
+    .forEach(function(b){
+
+        b.classList.remove("active");
+
+    });
+
+
+    if(button){
+        button.classList.add("active");
+    }
+
+
+    const data = {
+
+        dashboard:[
+            "Main Dashboard",
+            "AI-powered identity verification center"
+        ],
+
+        screening:[
+            "Document Screening",
+            "AI-based document risk analysis"
+        ],
+
+        cases:[
+            "Case Management",
+            "Review suspicious identity cases"
+        ],
+
+        reports:[
+            "Reports & Analytics",
+            "Security screening statistics"
+        ],
+
+        security:[
+            "Security Center",
+            "Authentication and system security"
+        ]
+
+    };
+
+
+    document
+    .getElementById("pageTitle")
+    .textContent = data[page][0];
+
+
+    document
+    .getElementById("pageDescription")
+    .textContent = data[page][1];
+
+}
+
+
+/* ====================
